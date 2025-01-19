@@ -79,7 +79,7 @@ function submit() {
     return
   } else if ((sides == 3) && (angles >= 0)) {
     // SSS Case
-    tcase = "SSS"
+    tcase = "𝗦𝗦𝗦"
     // Law of Cosines
     C = acos((a**2+b**2-c**2)/(2*a*b))
     // Law of Sines
@@ -89,9 +89,9 @@ function submit() {
   } else if ((sides == 1) && (angles > 1)) {
     // SAA/AAS/ASA Case
     if (A=="") {
-      tcase="ASA"
+      tcase="𝗔𝗦𝗔"
     } else {
-      tcase="SAA"
+      tcase="𝗦𝗔𝗔"
     }
     // Triangle Sum Theorem
     if (A=="") {
@@ -107,7 +107,7 @@ function submit() {
   } else if ((sides == 2) && (angles > 0)) {
     if (((b=="") && (B!="")) || ((c=="") && (C!=""))) {
       // SAS Case
-      tcase = "SAS"
+      tcase = "𝗦𝗔𝗦"
       // Law of Cosines
       if (b=="") {
         b = Math.sqrt((a**2+c**2)-(2*a*c*Math.cos(rad(B))))
@@ -130,31 +130,31 @@ function submit() {
       if (A!="") {
         if (b!="") {
           if ((A>90) || (a>b)) {
-            tcase="SSA (One)"
+            tcase="𝗦𝗦𝗔 (One)"
           } else {
-            tcase="SSA (Ambiguous)"
+            tcase="𝗦𝗦𝗔 (Ambiguous)"
             twoCase=true
           }
         } else if (c!="") {
           if ((A>90) || (a>c)) {
-            tcase="SSA (One)"
+            tcase="𝗦𝗦𝗔 (One)"
           } else {
-            tcase="SSA (Ambiguous)"
+            tcase="𝗦𝗦𝗔 (Ambiguous)"
             twoCase=true
           }
         }
       } else if (B!="") {
         if ((B>90) || (b>a)) {
-          tcase="SSA (One)"
+          tcase="𝗦𝗦𝗔 (One)"
         } else {
-          tcase="SSA (Ambiguous)"
+          tcase="𝗦𝗦𝗔 (Ambiguous)"
           twoCase=true
         }
       } else if (C!="") {
         if ((C>90) || (c>a)) {
-          tcase="SSA (One)"
+          tcase="𝗦𝗦𝗔 (One)"
         } else {
-          tcase="SSA (Ambiguous)"
+          tcase="𝗦𝗦𝗔 (Ambiguous)"
           twoCase=true
         }
       }
@@ -326,7 +326,7 @@ function submit() {
     }
   }
   if (!twoCase) {
-    if (confirm("**Case: "+tcase+"**"+n+"a: "+a+n+"b: "+b+n+"c: "+c+n+"α: "+A+deg+n+"β: "+B+deg+n+"γ: "+C+deg+n+n+"Copy results to clipboard?")) {
+    if (confirm("Case: "+tcase+n+"a: "+a+n+"b: "+b+n+"c: "+c+n+"α: "+A+deg+n+"β: "+B+deg+n+"γ: "+C+deg+n+n+"Copy results to clipboard?")) {
       copy = prompt("Type 'a', 'b', 'c', 'A', 'B', or 'C' to copy values (click cancel when done)")
       while (true) {
         let copiedText = "Copied!\n\n"
