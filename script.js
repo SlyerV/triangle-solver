@@ -82,7 +82,6 @@ function submit() {
     tcase = "SSS"
     // Law of Cosines
     C = acos((a**2+b**2-c**2)/(2*a*b))
-    // alert((a**2+b**2-c**2)/(2*a*b))
     // Law of Sines
     B = asin((Math.sin(rad(C))/c)*b)
     // Triangle Sum Theorem
@@ -112,7 +111,6 @@ function submit() {
       // Law of Cosines
       if (b=="") {
         b = Math.sqrt((a**2+c**2)-(2*a*c*Math.cos(rad(B))))
-        // alert(Math.cos(rad(B)))
         // Law of Sines
         A = asin((Math.sin(rad(B))/b)*a)
         // Triangle Sum Theorem
