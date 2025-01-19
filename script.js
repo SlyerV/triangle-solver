@@ -98,7 +98,7 @@ function submit() {
       A = (180-B)-C
     } else if (B=="") {
       B = (180-A)-C
-    } else if (C=="") {
+    } else {
       C = (180-A)-B
     }
     // Law of Sines
